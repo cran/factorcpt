@@ -1,4 +1,4 @@
-21fbe94131b64a95e7a0f48e46dc4cb1 *DESCRIPTION
+15b4d1ff4ad6288ede41eec4571e7b00 *DESCRIPTION
 1ac124894f75834ac8c5b0a2f8f9a38b *NAMESPACE
 a0ddd127afb20c258ebcbc833deb7cc9 *R/RcppExports.R
 a1876930e3655367cdcd6f72e1356b80 *R/package.R
@@ -20,4 +20,4 @@ b50e3c101f7ca2c0dc29a980e6d8259c *man/make.tree.Rd
 21cec033d5e1aeec682da48ca9c9797d *man/tri.kern.Rd
 8d46d69896a1f1d31ed76035a0e49d67 *src/Makevars.win
 f37366d250ff6a336fdb1284112fbdff *src/RcppExports.cpp
-c8f10c0c467d5d84c59f9c9758aa7b73 *src/input.cpp
+7d167db894f322839a6b46f34520b448 *src/input.cpp

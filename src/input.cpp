@@ -35,7 +35,8 @@ List func_dc(NumericMatrix z){
   NumericVector iminus(n);
   double factor;
 
-  factor = sqrt(len-1)/sqrt(len);
+  factor = (len-1)/(double)len;
+  factor = sqrt(factor);
   iplus = z(_, 0);
   for(j=0; j<n; j++){
     iminus(j) = sum(z(j, _))-z(j, 0);
@@ -44,7 +45,8 @@ List func_dc(NumericMatrix z){
   }
   if(len-2>0){
     for(i=1; i<len-1; i++){
-      factor = sqrt(i+1)*sqrt(len-i-1)/sqrt(len);
+      factor = (i+1)*(len-i-1)/(double)len;
+      factor = sqrt(factor);
       for(j=0; j<n; j++){
         iplus(j) = iplus(j)+z(j, i);
         iminus(j) = iminus(j)-z(j, i);
@@ -58,13 +60,15 @@ List func_dc(NumericMatrix z){
     ref = stl_sort(acs(_, i));
     ref = rcpp_rev(ref);
 
-    factor = sqrt(nt-1)/sqrt(nt);
+    factor = (nt-1)/(double)nt;
+    factor = sqrt(factor);
     iplus(0) = ref(0);
     iminus(0) = sum(ref)-ref(0);
     col(0) = iplus(0)-iminus(0)/(nt-1);
     col(0) = factor*col(0);
     for(j=1; j<n; j++){
-      factor = sqrt(j+1)*sqrt(nt-j-1)/sqrt(nt);
+      factor = (j+1)*(nt-j-1)/(double)nt;
+      factor = sqrt(factor);
       iplus(j) = iplus(j-1)+ref(j);
       iminus(j) = iminus(j-1)-ref(j);
       col(j) = iplus(j)/(j+1)-iminus(j)/(nt-j-1);
@@ -99,7 +103,8 @@ List func_dc_by(NumericMatrix z, double dmby, double dtby){
 
 	double factor, plus, minus;
 
-	factor = sqrt(len-1)/sqrt(len);
+	factor = (len-1)/(double)len;
+	factor = sqrt(factor);
 	iplus = z(_, 0);
 	for(j=0; j<n; j++){
 		iminus(j) = sum(z(j, _))-z(j, 0);
@@ -108,7 +113,8 @@ List func_dc_by(NumericMatrix z, double dmby, double dtby){
 	}
 	if(len-2>0){
 		for(i=1; i<len-1; i++){
-			factor = sqrt(i+1)*sqrt(len-i-1)/sqrt(len);
+			factor = (i+1)*(len-i-1)/(double)len;
+		  factor = sqrt(factor);
 			for(j=0; j<n; j++){
 				iplus(j) = iplus(j)+z(j, i);
 				iminus(j) = iminus(j)-z(j, i);
@@ -122,7 +128,8 @@ List func_dc_by(NumericMatrix z, double dmby, double dtby){
 		ref = stl_sort(acs(_, i*tby));
 		ref = rcpp_rev(ref);
 
-		factor = sqrt(nt-1)/sqrt(nt);
+		factor = (nt-1)/(double)nt;
+		factor = sqrt(factor);
 		plus = ref(0);
 		minus = sum(ref)-ref(0);
 		col(0) = plus-minus/(nt-1);
@@ -132,7 +139,8 @@ List func_dc_by(NumericMatrix z, double dmby, double dtby){
 			plus += ref(k); minus -= ref(k);
 		}
 		for(j=1; j<nb; j++){
-			factor = sqrt(j*mby+1)*sqrt(nt-j*mby-1)/sqrt(nt);
+			factor = (j*mby+1)*(nt-j*mby-1)/(double)nt;
+		  factor = sqrt(factor);
 			plus += ref(j*mby);
 			minus -= ref(j*mby);
 			col(j*mby) = plus/(j*mby+1)-minus/(nt-j*mby-1);
