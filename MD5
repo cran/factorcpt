@@ -1,11 +1,11 @@
-15b4d1ff4ad6288ede41eec4571e7b00 *DESCRIPTION
+9ee88218d11f6e64810ffa1c5687445b *DESCRIPTION
 1ac124894f75834ac8c5b0a2f8f9a38b *NAMESPACE
 a0ddd127afb20c258ebcbc833deb7cc9 *R/RcppExports.R
 a1876930e3655367cdcd6f72e1356b80 *R/package.R
 d0c16127496387defe2590b812a5bc0e *man/common.null.stat.Rd
 f462a9374d320855b7dc6690dfa2f14a *man/common.seg.Rd
 b1d8aa3c7d84d563be7311ace0e76d06 *man/factor.seg.alg.Rd
-d09d6339334cbd6a83a7998e5a79e5e1 *man/factorcpt-package.rd
+3bbaf9d6cb0fa1ab2e69bf4ec7ade2de *man/factorcpt-package.rd
 447039954dda7ae6323cc03c33322a7e *man/func_coef.Rd
 8e05c7704c99281284c74e17f2725a22 *man/func_dc.Rd
 b55cb666eecf124cf0eef21b9e61acb6 *man/func_dc_by.Rd

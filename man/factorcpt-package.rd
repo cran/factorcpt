@@ -15,8 +15,8 @@ The package implements a two-stage methodology for consistent multiple change-po
 \tabular{ll}{
 Package: \tab factorcpt\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2016-09-28\cr
+Version: \tab 0.1.2\cr
+Date: \tab 2016-12-22\cr
 License: \tab GPL (>= 2)\cr
 }
 
@@ -24,7 +24,7 @@ The main routines of the package are \code{\link{factor.seg.alg}} and \code{\lin
 
 }
 \author{
-Haeran Cho
+Haeran Cho, Matteo Barigozzi, Piotr Fryzlewicz
 
 Maintainer: Haeran Cho <haeran.cho@bristol.ac.uk>
 }
